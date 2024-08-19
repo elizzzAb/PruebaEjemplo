@@ -76,13 +76,20 @@ namespace ejemplo1
 
                 Customers.Add(customers);
             }
-
+            dataGrid.DataSource = Customers;
 
             MessageBox.Show("Conexion cerrada");
             conexion.Close();
 
 
 
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var filtro = Customers.FindAll(X => X.CompanyName.StartsWith(tbFiltro.Text));
+            dataGrid.DataSource = filtro;
 
         }
     }
