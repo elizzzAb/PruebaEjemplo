@@ -27,10 +27,30 @@ namespace ejemplo1
         {
             SqlConnection conexion = 
                 new SqlConnection("Data Source=LAPTOP-GK1DJVHC\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True;");
+            //conexion.Open();
+            ////MessageBox.Show("Conectado");
+            ////conexion.Close();
+            ////MessageBox.Show("Gracias, Conexion finalizada");
+
+            //string selectFrom = "SELECT * FROM [dbo].[Customers]";
+            //SqlCommand comando = new SqlCommand(selectFrom, conexion);
+
+            //conexion.Close();
+            MessageBox.Show("Conexion creada");
             conexion.Open();
-            MessageBox.Show("Conectado");
+            string selectFrom = "SELECT * FROM [dbo].[Customers]";
+            SqlCommand comando = new SqlCommand(selectFrom, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var customerId = reader[0];
+            }
+
+            MessageBox.Show("Conexion cerrada");
             conexion.Close();
-            MessageBox.Show("Gracias, Conexion finalizada");
+            
+
 
         }
     }
