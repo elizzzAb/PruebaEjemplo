@@ -18,3 +18,6 @@ C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csp
 C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.CoreCompileInputs.cache
 C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.exe
 C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.pdb
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\bin\Debug\DatosLayer.dll
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\bin\Debug\DatosLayer.pdb
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.CopyComplete

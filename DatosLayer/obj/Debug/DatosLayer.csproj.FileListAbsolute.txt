@@ -1,0 +1,6 @@
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\DatosLayer\bin\Debug\DatosLayer.dll
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\DatosLayer\bin\Debug\DatosLayer.pdb
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\DatosLayer\obj\Debug\DatosLayer.csproj.AssemblyReference.cache
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\DatosLayer\obj\Debug\DatosLayer.csproj.CoreCompileInputs.cache
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\DatosLayer\obj\Debug\DatosLayer.dll
+C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\DatosLayer\obj\Debug\DatosLayer.pdb
