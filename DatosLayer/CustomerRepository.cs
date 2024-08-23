@@ -27,28 +27,31 @@ namespace DatosLayer
             selectFrom = selectFrom + "      ,[Fax] " + "\n";
             selectFrom = selectFrom + "  FROM [dbo].[Customers]";
 
-            SqlCommand comando = new SqlCommand(selectFrom, conexion);
-            SqlDataReader reader = comando.ExecuteReader();
-            List<customers> Customers = new List<customers>();
-
-            while (reader.Read())
+            using (SqlCommand comando = new SqlCommand(selectFrom, conexion))
             {
-                customers customers = new customers();
-                customers.CompanyName = reader["CompanyName"] == DBNull.Value ? "" : (String)reader["CompanyName"];
-                customers.ContactName = reader["ContactName"] == DBNull.Value ? "" : (String)reader["ContactName"];
-                customers.ContactTitle = reader["ContactTitle"] == DBNull.Value ? "" : (String)reader["ContactTitle"];
-                customers.Address = reader["Address"] == DBNull.Value ? "" : (String)reader["Address"];
-                customers.City = reader["City"] == DBNull.Value ? "" : (String)reader["City"];
-                customers.Region = reader["Region"] == DBNull.Value ? "" : (String)reader["Region"];
-                customers.PostalCode = reader["PostalCode"] == DBNull.Value ? "" : (String)reader["PostalCode"];
-                customers.Country = reader["Country"] == DBNull.Value ? "" : (String)reader["Country"];
-                customers.Phone = reader["Phone"] == DBNull.Value ? "" : (String)reader["Phone"];
-                customers.Fax = reader["Fax"] == DBNull.Value ? "" : (String)reader["Fax"];
+                SqlDataReader reader = comando.ExecuteReader();
+                List<customers> Customers = new List<customers>();
 
-                Customers.Add(customers);
+                while (reader.Read())
+                {
+                    customers customers = new customers();
+                    customers.CompanyName = reader["CompanyName"] == DBNull.Value ? "" : (String)reader["CompanyName"];
+                    customers.ContactName = reader["ContactName"] == DBNull.Value ? "" : (String)reader["ContactName"];
+                    customers.ContactTitle = reader["ContactTitle"] == DBNull.Value ? "" : (String)reader["ContactTitle"];
+                    customers.Address = reader["Address"] == DBNull.Value ? "" : (String)reader["Address"];
+                    customers.City = reader["City"] == DBNull.Value ? "" : (String)reader["City"];
+                    customers.Region = reader["Region"] == DBNull.Value ? "" : (String)reader["Region"];
+                    customers.PostalCode = reader["PostalCode"] == DBNull.Value ? "" : (String)reader["PostalCode"];
+                    customers.Country = reader["Country"] == DBNull.Value ? "" : (String)reader["Country"];
+                    customers.Phone = reader["Phone"] == DBNull.Value ? "" : (String)reader["Phone"];
+                    customers.Fax = reader["Fax"] == DBNull.Value ? "" : (String)reader["Fax"];
+
+                    Customers.Add(customers);
+                }
+                return Customers;
+
             }
-            conexion.Close();
-            return Customers;
+            //conexion.Close();
         }
 
     }
