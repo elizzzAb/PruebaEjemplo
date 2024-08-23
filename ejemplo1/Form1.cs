@@ -1,4 +1,4 @@
-﻿using ejemplo1.Modelos;
+﻿using DatosLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,8 @@ namespace ejemplo1
 {
     public partial class Form1 : Form
     {
-        List<customers> Customers = new List<customers>();
+        //List<customers> Customers = new List<customers>();
+        CustomerRepository customerRepository = new CustomerRepository();
 
         public Form1()
         {
@@ -23,82 +24,39 @@ namespace ejemplo1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ////string cadenaConexion = DatosLayer.DataBase.ConnectionString;
+            ////MessageBox.Show(cadenaConexion);
+
+            //DatosLayer.DataBase.ApplicationName = "Programación 2; ejemplo";
+            //DatosLayer.DataBase.ConnetionTimeout = 30;
+
+
             //string cadenaConexion = DatosLayer.DataBase.ConnectionString;
-            //MessageBox.Show(cadenaConexion);
 
-            DatosLayer.DataBase.ApplicationName = "Programación 2; ejemplo";
-            DatosLayer.DataBase.ConnetionTimeout = 30;
-            string cadenaConexion = DatosLayer.DataBase.ConnectionString;
+            ////var conectarDB = DatosLayer.DataBase.GetSqlConnection();
+            //var conexion = DatosLayer.DataBase.GetSqlConnection();
 
-            //var conectarDB = DatosLayer.DataBase.GetSqlConnection();
-            var conexion = DatosLayer.DataBase.GetSqlConnection();
+
+            /*  DatosLayer.DataBase.ApplicationName = "Programacion 2 ejemplo";
+        DatosLayer.DataBase.ConnectionTimeout = 30;
+
+        string cadenaConexion = DatosLayer.DataBase.ConnectionString;
+          var conxion = DatosLayer.DataBase.GetSqlConnection();
+       */
 
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = 
-                new SqlConnection("Data Source=LAPTOP-GK1DJVHC\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True;");
-
-            MessageBox.Show("Conexion creada");
-            conexion.Open();
-
-
-
-            //------------------------
-
-            String selectFrom = "";
-            selectFrom = selectFrom + "SELECT [CompanyName] " + "\n";
-            selectFrom = selectFrom + "      ,[ContactName] " + "\n";
-            selectFrom = selectFrom + "      ,[ContactTitle] " + "\n";
-            selectFrom = selectFrom + "      ,[Address] " + "\n";
-            selectFrom = selectFrom + "      ,[City] " + "\n";
-            selectFrom = selectFrom + "      ,[Region] " + "\n";
-            selectFrom = selectFrom + "      ,[PostalCode] " + "\n";
-            selectFrom = selectFrom + "      ,[Country] " + "\n";
-            selectFrom = selectFrom + "      ,[Phone] " + "\n";
-            selectFrom = selectFrom + "      ,[Fax] " + "\n";
-            selectFrom = selectFrom + "  FROM [dbo].[Customers]";
-
-            //-----------------------
-
-
-
-
-            SqlCommand comando = new SqlCommand(selectFrom, conexion);
-            SqlDataReader reader = comando.ExecuteReader();
-
-            while (reader.Read())
-            {
-
-                customers customers = new customers();
-                customers.CompanyName = reader["CompanyName"] == DBNull.Value ? "" : (String)reader["CompanyName"];
-                customers.ContactName = reader["ContactName"] == DBNull.Value ? "" : (String)reader["ContactName"];
-                customers.ContactTitle = reader["ContactTitle"] == DBNull.Value ? "" : (String)reader["ContactTitle"];
-                customers.Address = reader["Address"] == DBNull.Value ? "" : (String)reader["Address"];
-                customers.City = reader["City"] == DBNull.Value ? "" : (String)reader["City"];
-                customers.Region = reader["Region"] == DBNull.Value ? "" : (String)reader["Region"];
-                customers.PostalCode = reader["PostalCode"] == DBNull.Value ? "" : (String)reader["PostalCode"];
-                customers.Country = reader["Country"] == DBNull.Value ? "" : (String)reader["Country"];
-                customers.Phone = reader["Phone"] == DBNull.Value ? "" : (String)reader["Phone"];
-                customers.Fax = reader["Fax"] == DBNull.Value ? "" : (String)reader["Fax"];
-
-                Customers.Add(customers);
-            }
+            //////dataGrid.DataSource = Customers;
+            var Customers = customerRepository.ObtenerTodos();
             dataGrid.DataSource = Customers;
-
-            MessageBox.Show("Conexion cerrada");
-            conexion.Close();
-
-
-
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            var filtro = Customers.FindAll(X => X.CompanyName.StartsWith(tbFiltro.Text));
-            dataGrid.DataSource = filtro;
+            //var filtro = Customers.FindAll(X => X.CompanyName.StartsWith(tbFiltro.Text));
+            //dataGrid.DataSource = filtro;
 
         }
     }
