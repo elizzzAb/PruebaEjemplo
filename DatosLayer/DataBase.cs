@@ -9,6 +9,41 @@ using System.Xml.Linq;
 
 namespace DatosLayer
 {
+
+    //public class CustomerRepository
+    //{
+    //    public List<customers> ObtenerTodos();
+
+    //    public customers ObtenerPorID(string id)
+    //    {
+
+    //        using (var conexion = DataBase.GetSqlConnection())
+    //        {
+
+    //            String selectForID = "";
+    //            selectForID = selectForID + "SELECT [CustomerID] " + "\n";
+    //            selectForID = selectForID + "      ,[CompanyName] " + "\n";
+    //            selectForID = selectForID + "      ,[ContactName] " + "\n";
+    //            selectForID = selectForID + "      ,[ContactTitle] " + "\n";
+    //            selectForID = selectForID + "      ,[Address] " + "\n";
+    //            selectForID = selectForID + "      ,[City] " + "\n";
+    //            selectForID = selectForID + "      ,[Region] " + "\n";
+    //            selectForID = selectForID + "      ,[PostalCode] " + "\n";
+    //            selectForID = selectForID + "      ,[Country] " + "\n";
+    //            selectForID = selectForID + "      ,[Phone] " + "\n";
+    //            selectForID = selectForID + "      ,[Fax] " + "\n";
+    //            selectForID = selectForID + "  FROM [dbo].[Customers] " + "\n";
+    //            selectForID = selectForID + $"  Where CustomerID = '{id}'";
+
+
+    //        }
+    //    }
+    //}
+
+
+
+    //}
+
     public class DataBase
     {
         public static int ConnetionTimeout { get; set; }
