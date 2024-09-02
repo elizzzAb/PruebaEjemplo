@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,6 +46,7 @@ namespace ejemplo1
 
         }
 
+        //btnBuscar:Click:
         private void button1_Click(object sender, EventArgs e)
         {
             var cliente = customerRepository.ObtenerPorID(textBuscar.Text);
@@ -54,5 +56,81 @@ namespace ejemplo1
                 MessageBox.Show(cliente.CompanyName);
             }
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            var nuevoCliente = new customers 
+            {
+                CustomerID = tboxCustomerID.Text,
+                CompanyName = tboxCompanyName.Text,
+                ContactName = tboxContacName.Text,
+                ContactTitle = tboxContactTitle.Text,
+                Address = tboxAddress.Text,
+                City = tboxCity.Text
+
+            };
+
+            var resultado = 0;
+            if (validarCampoNull(nuevoCliente) == false)
+            {
+                resultado = customerRepository.InsertarCliente(nuevoCliente);
+            }
+            else
+            {
+                MessageBox.Show("Debe completar todos los campos por favor" + resultado);
+            }
+
+            /*
+            if (nuevoCliente.CustomerID == "") {
+                MessageBox.Show("El Id en el usuario debe de completarse");
+               return;    
+            }
+
+            if (nuevoCliente.ContactName == "")
+            {
+                MessageBox.Show("El nombre de usuario debe de completarse");
+                return;
+            }
+            
+            if (nuevoCliente.ContactTitle == "")
+            {
+                MessageBox.Show("El contacto de usuario debe de completarse");
+                return;
+            }
+            if (nuevoCliente.Address == "")
+            {
+                MessageBox.Show("la direccion de usuario debe de completarse");
+                return;
+            }
+            if (nuevoCliente.City == "")
+            {
+                MessageBox.Show("La ciudad de usuario debe de completarse");
+                return;
+            }
+
+            */
+
+
+        }
+
+        // si encautnra un null enviara true de lo caontrario false
+        public Boolean validarCampoNull(Object objeto)
+        {
+
+            foreach (PropertyInfo property in objeto.GetType().GetProperties())
+            {
+                object value = property.GetValue(objeto, null);
+                if ((string)value == "")
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
+
+
+
     }
 }

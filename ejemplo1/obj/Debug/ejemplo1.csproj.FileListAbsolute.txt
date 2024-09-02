@@ -21,3 +21,16 @@ C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.pdb
 C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\bin\Debug\DatosLayer.dll
 C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\bin\Debug\DatosLayer.pdb
 C:\Users\Elizabeth\Desktop\NuevaCarpeta\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.CopyComplete
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\bin\Debug\ejemplo1.exe.config
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\bin\Debug\ejemplo1.exe
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\bin\Debug\ejemplo1.pdb
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\bin\Debug\DatosLayer.dll
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\bin\Debug\DatosLayer.pdb
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.AssemblyReference.cache
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.Form1.resources
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.Properties.Resources.resources
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.GenerateResource.cache
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.CoreCompileInputs.cache
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.csproj.CopyComplete
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.exe
+C:\Users\Elizabeth\Desktop\ProgramacionIIPracticas\GuiasVI-XVI\ejemplo1\ejemplo1\obj\Debug\ejemplo1.pdb
